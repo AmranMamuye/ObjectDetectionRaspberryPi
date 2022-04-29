@@ -1,13 +1,14 @@
-# ObjectDetectionRaspberryPi
-**Implementing Object Detection with RaspberryPi**
+# Object Detection with RaspberryPi
 
-_Amran Mamuye, Chandler Mason, Diana Omomehin_   
-_Section B, Spring 2022_
+<img src="https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/main/images/CV.png" width="100%" height="30%">
 
+**_Amran Mamuye, Chandler Mason, Diana Omomehin_   - _Section B, Spring 2022_**
+
+##### Table of Contents  
   
 Below is a video demonstration of the final project:
 
-<iframe width="560" height="315" src="[https://www.youtube.com/embed/ssYNCzPAYsY](https://www.youtube.com/embed/ssYNCzPAYsY)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ssYNCzPAYsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
   
 **Introduction**
@@ -15,15 +16,17 @@ Below is a video demonstration of the final project:
 
 Object detection is a computer vision approach that identifies and locates items in an image or video. Object detection may be used to count items in a scene, determine and monitor their precise positions, and precisely label them using this type of identification and localization. Computer vision is an artificial intelligence area that trains computers to interpret and comprehend the visual environment. In recent years, there has been an exponential growth of computer vision applications in several industries. Some examples of computer vision applications are self-driving cars, facial recognition, robot perception, etc. APIs such as OpenCV and Tensorflow make it easy for programmers to easily process images, perform computer vision tasks, and train and deploy object detection models.
 
+
 **Description**
 ---------------
 
 As object detection can consist of a broad dataset, the team mainly focused on shape recognition using OpenCV on a raspberryPi. In addition, an LED light signals if a certain type of shape is detected by the raspberryPI camera. As a stretch goal for the project, the team implemented object detection for everyday objects using TensorFlow.
 
 To implement this project, the team used:  
-\- Platforms: RaspberryPi 4   
-\- Hardware: RaspberryPi camera   
-\- Programming languages: c++
+  - Platforms: RaspberryPi 4   
+  - Hardware: RaspberryPi camera, HDMI Compatible Display
+  - Programming languages: c++, python
+
 
 **Building the Project**
 ------------------------
@@ -67,16 +70,21 @@ The code begins execution in the main() function:
  
 **getShape(Mat image)**
 
- This function is where the image/frame captured is processed by converting the image to reeasily read pixels to count the number of corner to classify            the shape of the object captured by the Pi camera
+ This function is where the image/frame captured is processed by converting the image to reeasily read pixels to count the number of corner to classify                the shape of the object captured by the Pi camera
  
- Variable are defined:
+ Variables are defined:
  https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L21-L41
  
+ The image/frame captured is manipulate until the image is contoured.  Image contouring is outlining the object in the image so that the shape of the objects is identified. The image contouring processing:
+
+ https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L42-L61
+
+ Vectors initialized to store pixels:
+ https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L63-L66
  
-
-
-
-
+ 
+ 
+ https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L69-L133
 ###   
   
  
