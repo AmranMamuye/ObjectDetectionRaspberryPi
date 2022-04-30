@@ -102,6 +102,7 @@ https://youtu.be/ssYNCzPAYsY
 Our group was able to detect various shapes such as triangles, squares, circles, and rectangles along with various everyday objects such as a cup or phone with the Raspberry Pi camera.
 
 ![image](https://user-images.githubusercontent.com/103142185/166087960-69dff0a1-05c0-4120-b813-0f716b5a875d.jpeg)
+![IMG_6346](https://user-images.githubusercontent.com/103142185/166122544-43b42ceb-99aa-40f4-9cc0-6604b7c27b2d.jpg)
 
 **Future Direction**
 --------------------
