@@ -98,7 +98,8 @@ The code begins execution in the main() function:
 
 **Conclusion**
 --------------
-Our group was were able to detect various shapes such as triangles, squares, circles, and rectangles along with various everyday objects such as a cup or phone with the Raspberry Pi camera.
+Our group was able to detect various shapes such as triangles, squares, circles, and rectangles along with various everyday objects such as a cup or phone with the Raspberry Pi camera.
+
 ![image](https://user-images.githubusercontent.com/103142185/166087960-69dff0a1-05c0-4120-b813-0f716b5a875d.jpeg)
 
 **Future Direction**
