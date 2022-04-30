@@ -36,12 +36,37 @@ To implement this project, the team used:
 ####   
   
 **OpenCV**  
+
+To download and openCV, please follow the steps on this [website](https://solarianprogrammer.com/2019/09/17/install-opencv-raspberry-pi-raspbian-cpp-python-development/).   
+ <br>
   
 **wiringPi**
 
-Raspberry PI 
+To use the Raspberry PI GPIO, install wiringPI.
 
-Wiring Diagram 
+`wget https://project-downloads.drogon.net/wiringpi-latest.deb`
+`sudo dpkg -i wiringpi-latest.deb`
+
+To check:
+`gpio -v`
+
+Version should be 2.52.
+ 
+ <br>
+
+**Raspberry PI**
+
+Set up the raspberryPi and the Pi camera as shown in the image:
+
+
+ <br>
+ 
+*Wiring Diagram*
+
+Add a LED to a breadboard. The longer lead on the LED (+) goes to the GPIO bit 17 and the other LED lead (-) connects to a series resistor (around 100-300 ohms) that is connected to ground any gnd pin on Pi.
+<img src="https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/main/images/Raspberry-Pi-GPIO-Header-with-Photo.png" width="50%" height="30%">
+
+<br>
 
 ### **Shape Detection code** 
 
@@ -53,12 +78,12 @@ https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96b
 Created namespaces and defined LED pin: 
 https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L14-L17
 
- 
+  <br>
  
  ***Functions***
 
- 
- **main()**
+  
+ *main()*
 
 The code begins execution in the main() function: 
   
@@ -66,27 +91,36 @@ The code begins execution in the main() function:
   
   https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L138-L142
   
+  <br>
+  
   Checks if image is captured by camera, either calls the getShape() function or prints out an error:
   
   https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L145-L166
   
  
 
+ <br>
+ 
+*getShape(Mat image)*
 
-**getShape(Mat image)**
 
  This function is where the image/frame captured is processed by converting the image to easily read pixels to count the number of corner to classify                the shape of the object captured by the Pi camera.
  
  Variables are defined:
  https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L21-L41
  
+ <br>
+ 
  The image/frame captured is manipulated until the image is contoured.  Image contouring is outlining the object in the image so that the shape of the objects is identified. The image contouring processing:
 
  https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L42-L61
+ 
+ <br>
 
  Vectors initialized to store pixels:
  https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L63-L66
  
+ <br>
  
  Iterates through image to calculate the shapes' area and finds possible shapes. Then classifies the shapes based on the number of corners the shapes contain. The LED blinks when a triangle is detected.
  https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L69-L133
