@@ -43,7 +43,7 @@ Raspberry PI 
 
 Wiring Diagram 
 
-#### Shape Detection code
+### **Shape Detection code** 
 
 The code for shape detection is written in C++. The code is heavily dependent on the OpenCV library. It reads an image from the RaspberryPi camera, processes the image, then counts the number of corners to categorize the shape of the image captured by the Pi camera. 
 
@@ -53,9 +53,12 @@ https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96b
 Created namespaces and defined LED pin: 
 https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L14-L17
 
-**functions**
+ 
+ 
+ ***Functions***
 
-**main()**
+ 
+ **main()**
 
 The code begins execution in the main() function: 
   
@@ -68,14 +71,16 @@ The code begins execution in the main() function:
   https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L145-L166
   
  
+
+
 **getShape(Mat image)**
 
- This function is where the image/frame captured is processed by converting the image to reeasily read pixels to count the number of corner to classify                the shape of the object captured by the Pi camera
+ This function is where the image/frame captured is processed by converting the image to easily read pixels to count the number of corner to classify                the shape of the object captured by the Pi camera.
  
  Variables are defined:
  https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L21-L41
  
- The image/frame captured is manipulate until the image is contoured.  Image contouring is outlining the object in the image so that the shape of the objects is identified. The image contouring processing:
+ The image/frame captured is manipulated until the image is contoured.  Image contouring is outlining the object in the image so that the shape of the objects is identified. The image contouring processing:
 
  https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L42-L61
 
@@ -83,7 +88,7 @@ The code begins execution in the main() function:
  https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L63-L66
  
  
- 
+ Iterates through image to calculate the shapes' area and finds possible shapes. Then classifies the shapes based on the number of corners the shapes contain. The LED blinks when a triangle is detected.
  https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/f54efdbbea628c96bbd80a2a6a55f47993d61071/shapeDetection.cpp#L69-L133
 ###   
   
@@ -92,17 +97,32 @@ The code begins execution in the main() function:
 **Compiling and Running the Project** 
 --------------------------------------
 
+To complile the project, locate the file and run the following command in terminal. The command `-lwiringPi` runs wiringPi and `pkg-config --cflags --libs opencv` runs openCV.
+
+<pre><code class="language-plaintext">user$ g++ shapeDetection.cpp -o outputFile -lwiringPi `pkg-config --cflags --libs opencv`</code></pre>
+
+To run the file:
+
+`./outputFile`
+
+A "current" window for the image caputure from the Pi camera will pop up.
+
+
 **Testing the Project**
 -----------------------
-https://youtu.be/ssYNCzPAYsY
-<img width="161" alt="image" src="https://user-images.githubusercontent.com/103142185/166122224-2ab19fa7-160b-44ef-95da-7b33b272421d.png">
+
+Once the "current" window pops up, the code will start detecting shapes captured by the Pi camera. 
+
+**Project Extension: Object Detection in Python**
+----------------------------------------------------
+
+
 
 **Conclusion**
 --------------
 Our group was able to detect various shapes such as triangles, squares, circles, and rectangles along with various everyday objects such as a cup or phone with the Raspberry Pi camera.
 
 ![image](https://user-images.githubusercontent.com/103142185/166087960-69dff0a1-05c0-4120-b813-0f716b5a875d.jpeg)
-![IMG_6346](https://user-images.githubusercontent.com/103142185/166122544-43b42ceb-99aa-40f4-9cc0-6604b7c27b2d.jpg)
 
 **Future Direction**
 --------------------
