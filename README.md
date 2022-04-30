@@ -95,11 +95,15 @@ The code begins execution in the main() function:
 **Testing the Project**
 -----------------------
 
+
 **Conclusion**
 --------------
+Our group was were able to detect various shapes such as triangles, squares, circles, and rectangles along with various everyday objects such as a cup or phone with the Raspberry Pi camera.
+![image](https://user-images.githubusercontent.com/103142185/166087960-69dff0a1-05c0-4120-b813-0f716b5a875d.jpeg)
 
 **Future Direction**
 --------------------
+For our future direction, we want to undergo more training so that we can expand the amount of shapes and objects our device can detect. We also plan to make its detection more accurate, so for example it won't momentarily make simple mistakes like detecting a circle for a pentagon. We also want to provide voice feedback in which the object being detected is said verbally spoken through the Pi audio, allowing the user to quickly tell what object is detected. Lastly, we want to do more work on everyday object detection to increase the frames per second and maybe introduce facial recognition.  
 
 Helpful Links/Resources
 -----------------------
