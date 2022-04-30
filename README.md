@@ -146,6 +146,8 @@ A "current" window for the image caputure from the Pi camera will pop up.
 -----------------------
 
 Once the "current" window pops up, the code will start detecting shapes captured by the Pi camera. 
+https://youtu.be/ssYNCzPAYsY
+<img width="161" alt="image" src="https://user-images.githubusercontent.com/103142185/166123989-43b281b8-188c-4a5d-989d-595106294db3.png">
 
 **Project Extension: Object Detection in Python**
 ----------------------------------------------------
