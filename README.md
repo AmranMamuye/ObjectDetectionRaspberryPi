@@ -160,8 +160,42 @@ https://youtu.be/ssYNCzPAYsY
 
 **Project Extension: Object Detection in Python**
 ----------------------------------------------------
+Setting up TensorFlow Lite on the Raspberry Pi is much easier than regular TensorFlow! These are the steps needed to set up TensorFlow Lite:
+
+1. Update the Raspberry Pi
+<pre><code class="language-plaintext">sudo apt-get update
+sudo apt-get dist-upgrade</code></pre>
 
 
+2. Download this repository and create virtual environment
+<pre><code class="language-plaintext">git clone https://github.com/AmranMamuye/ObjectDetectionRaspberryPi</code></pre>
+
+Then cd into the directory on your terminal
+Install virtualenv
+<pre><code class="language-plaintext">sudo pip3 install virtualenv</code></pre>
+
+Create virtualenv
+<pre><code class="language-plaintext">python3 -m venv tflite</code></pre>
+
+Finally activate the virtual environment
+<pre><code class="language-plaintext">source tflite/bin/activate</code></pre>
+
+
+3. Install TensorFlow Lite dependencies and OpenCV
+
+I have created a bash script to install the dependencies. 
+Run:
+<pre><code class="language-plaintext">bash requirements.sh</code></pre>
+
+
+4. Set up TensorFlow Lite detection model
+<pre><code class="language-plaintext">wget https://storage.googleapis.com/download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip</code></pre>
+
+Unzip the downloaded model
+<pre><code class="language-plaintext">unzip coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip -d model</code></pre>
+
+5. Run TensorFlow Lite model!
+<pre><code class="language-plaintext">python3 ObjectReal.py --modeldir=model</code></pre>
 
 **Conclusion**
 --------------
