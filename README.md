@@ -183,7 +183,7 @@ Finally activate the virtual environment
 
 3. Install TensorFlow Lite dependencies and OpenCV
 
-I have created a bash script to install the dependencies. 
+We have created a bash script to install the dependencies. 
 Run:
 <pre><code class="language-plaintext">bash requirements.sh</code></pre>
 
