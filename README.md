@@ -5,10 +5,18 @@
 **_Amran Mamuye, Chandler Mason, Diana Omomehin_   - _Section B, Spring 2022_**
 
 ##### Table of Contents  
-  
+ Demo
+ Introduction
+ Description
+ Building the Project
+ Shape Detection code
+ Compiling and Running the Project
+ Project Extension Object Detection
+ Conclusion
+ Future Direction
+ 
 Below is a video demonstration of the final project:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ssYNCzPAYsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 [![Watch the video](https://user-images.githubusercontent.com/64986514/166131917-5a5da3ba-f33a-4629-8f60-37880d6ac2cc.png)](https://www.youtube.com/embed/ssYNCzPAYsY)
 
   
