@@ -66,7 +66,8 @@ Version should be 2.52.
 **Raspberry PI**
 
 Set up the raspberryPi and the Pi camera as shown in the image:
-
+ <br>
+<img src="https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/main/images/PI.png" width="50%" height="30%">
 
  <br>
  
@@ -74,7 +75,7 @@ Set up the raspberryPi and the Pi camera as shown in the image:
 
 Add a LED to a breadboard. The longer lead on the LED (+) goes to the GPIO bit 17 and the other LED lead (-) connects to a series resistor (around 100-300 ohms) that is connected to ground any gnd pin on Pi.
 <img src="https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/main/images/Raspberry-Pi-GPIO-Header-with-Photo.png" width="50%" height="30%">
-
+<img src="https://github.com/AmranMamuye/ObjectDetectionRaspberryPi/blob/main/images/led.png" width="50%" height="30%">
 <br>
 
 ### **Shape Detection code** 
